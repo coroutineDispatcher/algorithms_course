@@ -1,4 +1,7 @@
+package java_version.arrays;
+
 public class InsertionSort {
+
     public static void main(String[] args) {
         int[] array = Utils.arrayOfSevenElements();
 

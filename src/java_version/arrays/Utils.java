@@ -1,3 +1,5 @@
+package java_version.arrays;
+
 public class Utils {
 
     public static void swap(int[] array, int first, int second) {

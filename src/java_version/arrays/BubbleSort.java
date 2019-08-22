@@ -1,3 +1,4 @@
+package java_version.arrays;
 
 public class BubbleSort {
     //last unsorted index = index of the unsorted partition
@@ -6,7 +7,7 @@ public class BubbleSort {
     public static void main(String[] args) {
         int[] a = Utils.arrayOfSevenElements();
 
-        long startTime =  System.nanoTime();
+        long startTime = System.nanoTime();
 
         for (int unsortedIndex = a.length - 1; unsortedIndex > 0; unsortedIndex--) {
             for (int i = 0; i < unsortedIndex; i++) {

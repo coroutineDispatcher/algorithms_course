@@ -1,3 +1,4 @@
+package java_version.arrays;
 
 public class SelectionSort {
     //last unsorted index = index of the unsorted partition
@@ -7,7 +8,7 @@ public class SelectionSort {
     public static void main(String[] args) {
         int[] array = Utils.arrayOfSevenElements();
 
-        long startTime =  System.nanoTime();
+        long startTime = System.nanoTime();
 
         for (int unsortedIndex = array.length - 1; unsortedIndex > 0; unsortedIndex--) {
 
@@ -21,7 +22,6 @@ public class SelectionSort {
                 Utils.swap(array, largestNumberIndex, unsortedIndex);
             }
         }
-
 
         System.out.print("Sorted Ended: " + (System.nanoTime() - startTime) + "\n");
         for (int i : array) {
