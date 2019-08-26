@@ -39,6 +39,17 @@ public class Utils {
         return max;
     }
 
+    public static long findMaximumOfArray(long[] arr) {
+        long max = Long.MIN_VALUE;
+        for (long value : arr) {
+            if (value > max) {
+                max = value;
+            }
+        }
+
+        return max;
+    }
+
     public static int findMinimumOfarray(int[] arr) {
         int min = Integer.MAX_VALUE;
         for (int value : arr) {
