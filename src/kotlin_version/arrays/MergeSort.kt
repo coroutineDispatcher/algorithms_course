@@ -22,17 +22,17 @@ fun mergeSort(array: IntArray, start: Int, end: Int) {
 }
 
 fun merge(array: IntArray, start: Int, mid: Int, end: Int) {
-    if (array[mid - 1] <= array[mid]) {
+    if (array[mid - 1] < array[mid]) {
         return
     }
 
     var i = start
     var j = mid
     var tempIndex = 0
-    val tempArray = IntArray(end - start)
+    var tempArray = IntArray(end - start)
 
     while (i < mid && j < end) {
-        tempArray[tempIndex++] = if (array[i] <= array[j]) array[i++] else array[j++]
+        tempArray[tempIndex++] = if (arrayOfInts[i] < arrayOfInts[j]) arrayOfInts[i++] else arrayOfInts[j++]
     }
 
     System.arraycopy(array, i, array, start + tempIndex, mid - i)

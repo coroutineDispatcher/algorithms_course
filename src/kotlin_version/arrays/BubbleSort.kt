@@ -9,7 +9,7 @@ fun main() {
 
     val startTime = System.nanoTime()
 
-    for (unsortedIndex in (arrayOfInts.size - 1) downTo 1) {
+    for (unsortedIndex in arrayOfInts.size - 1 downTo 1) {
         for (i in 0 until unsortedIndex) {
             if (arrayOfInts[i] > arrayOfInts[i + 1]) {
                 Utils.swap(arrayOfInts, i, i + 1)

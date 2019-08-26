@@ -7,22 +7,39 @@ public class InsertionSort {
 
         long startTime = System.nanoTime();
 
-        for (int firstUnsortedIndex = 1; firstUnsortedIndex < array.length; firstUnsortedIndex++) {
-            int newElement = array[firstUnsortedIndex];
-
-            int i;
-
-            for (i = firstUnsortedIndex; i > 0 && array[i - 1] > newElement; i--) {
-                array[i] = array[i - 1];
-            }
-
-            array[i] = newElement;
-        }
+        insertionSortRecursively(array, array.length);
 
         System.out.print("Sorted Ended: " + (System.nanoTime() - startTime) + "\n");
 
         for (int value : array) {
             System.out.print("" + value + "\n");
         }
+    }
+
+    public static void insertionSortRecursively(int[] arr, int numberOfItems) {
+        if (numberOfItems < 2) {
+            return;
+        }
+
+        insertionSortRecursively(arr, numberOfItems - 1);
+
+        int newElement = arr[numberOfItems - 1];
+
+        int i;
+
+        for (i = numberOfItems - 1; i > 0 && arr[i - 1] > newElement; i--) {
+            arr[i] = arr[i - 1];
+        }
+
+        arr[i] = newElement;
+
+        System.out.println("Result of call when number of items = " + numberOfItems);
+
+        for (i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+            System.out.print(", ");
+        }
+        System.out.println("");
+        System.out.println("------------------------------");
     }
 }
