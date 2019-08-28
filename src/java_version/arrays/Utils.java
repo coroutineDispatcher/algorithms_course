@@ -1,6 +1,7 @@
 package java_version.arrays;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Utils {
 
@@ -26,6 +27,16 @@ public class Utils {
         array[6] = 100;
 
         return array;
+    }
+
+    public static int[] arrayOfMillions() {
+        int[] arrayOfThousands = new int[1000000];
+        for (int i = 0; i < arrayOfThousands.length - 1; i++) {
+            int randVal = new Random().nextInt(1000000);
+            arrayOfThousands[i] = randVal;
+        }
+
+        return arrayOfThousands;
     }
 
     public static int findMaximumOfArray(int[] arr) {

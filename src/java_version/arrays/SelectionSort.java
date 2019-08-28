@@ -6,7 +6,7 @@ public class SelectionSort {
     // the index of max value of the array
 
     public static void main(String[] args) {
-        int[] array = Utils.arrayOfSevenElements();
+        int[] array = Utils.arrayOfMillions();
 
         long startTime = System.nanoTime();
 
@@ -24,8 +24,8 @@ public class SelectionSort {
         }
 
         System.out.print("Sorted Ended: " + (System.nanoTime() - startTime) + "\n");
-        for (int i : array) {
-            System.out.print("" + i + "\n");
-        }
+//        for (int i : array) {
+//            System.out.print("" + i + "\n");
+//        }
     }
 }

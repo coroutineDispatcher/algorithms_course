@@ -3,13 +3,13 @@ package java_version.arrays;
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] array = Utils.arrayOfSevenElements();
+        int[] array = Utils.arrayOfMillions();
         long startTime = System.nanoTime();
         mergeSort(array, 0, array.length);
         System.out.print("Sorted: " + (System.nanoTime() - startTime) + "\n");
-        for (int i : array) {
-            System.out.print("" + i + "\n");
-        }
+//        for (int i : array) {
+//            System.out.print("" + i + "\n");
+//        }
     }
 
     static void mergeSort(int[] array, int start, int end) {
