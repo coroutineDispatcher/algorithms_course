@@ -3,18 +3,18 @@ package kotlin_version.arrays
 fun main() {
     val startTime = System.nanoTime()
 
-    var gap = arrayOfInts.size / 2
+    var gap = arrayOfIntegers.size / 2
 
     while (gap > 0) {
-        for (i in gap until arrayOfInts.size) {
-            val newValue = arrayOfInts[i]
+        for (i in gap until arrayOfIntegers.size) {
+            val newValue = arrayOfIntegers[i]
             var j = i
 
-            while (j >= gap && arrayOfInts[j - gap] > 0) {
-                arrayOfInts[j] = arrayOfInts[j - gap]
+            while (j >= gap && arrayOfIntegers[j - gap] > 0) {
+                arrayOfIntegers[j] = arrayOfIntegers[j - gap]
                 j -= gap
             }
-            arrayOfInts[j] = newValue
+            arrayOfIntegers[j] = newValue
         }
         gap /= 2
     }
@@ -23,7 +23,7 @@ fun main() {
 
     println("Execution time: ${endTime - startTime}")
 
-    arrayOfInts.forEach {
+    arrayOfIntegers.forEach {
         println(it)
     }
 }

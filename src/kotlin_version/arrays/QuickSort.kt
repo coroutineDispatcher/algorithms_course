@@ -1,17 +1,17 @@
 package kotlin_version.arrays
 
+import java_version.arrays.Utils
+
+val arrayOfSomeInts = Utils.arrayOfThousands()
+
 fun main() {
     val startTime = System.nanoTime()
 
-    quickSort(arrayOfInts, 0, arrayOfInts.size)
+    quickSort(arrayOfSomeInts, 0, arrayOfSomeInts.size)
 
     val endTime = System.nanoTime()
 
     println("Execution time: ${endTime - startTime}")
-
-    arrayOfInts.forEach {
-        println(it)
-    }
 }
 
 fun quickSort(arrayOfInts: IntArray, start: Int, end: Int) {

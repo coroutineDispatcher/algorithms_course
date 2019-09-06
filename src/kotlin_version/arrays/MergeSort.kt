@@ -1,12 +1,15 @@
 package kotlin_version.arrays
 
+import java_version.arrays.Utils
+
+val arrayOfIntegers: IntArray = Utils.arrayOfMillions()
+
 fun main() {
     val startTime = System.nanoTime()
-    mergeSort(arrayOfInts, 0, arrayOfInts.size)
+
+    mergeSort(arrayOfIntegers, 0, arrayOfIntegers.size)
+
     println("Sorted: ${System.nanoTime() - startTime}")
-    arrayOfInts.forEach {
-        println(it)
-    }
 }
 
 fun mergeSort(array: IntArray, start: Int, end: Int) {
@@ -29,10 +32,10 @@ fun merge(array: IntArray, start: Int, mid: Int, end: Int) {
     var i = start
     var j = mid
     var tempIndex = 0
-    var tempArray = IntArray(end - start)
+    val tempArray = IntArray(end - start)
 
     while (i < mid && j < end) {
-        tempArray[tempIndex++] = if (arrayOfInts[i] < arrayOfInts[j]) arrayOfInts[i++] else arrayOfInts[j++]
+        tempArray[tempIndex++] = if (arrayOfIntegers[i] < arrayOfIntegers[j]) arrayOfIntegers[i++] else arrayOfIntegers[j++]
     }
 
     System.arraycopy(array, i, array, start + tempIndex, mid - i)

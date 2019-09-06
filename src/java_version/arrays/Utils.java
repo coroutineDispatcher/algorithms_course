@@ -39,6 +39,16 @@ public class Utils {
         return arrayOfThousands;
     }
 
+    public static int[] arrayOfThousands() {
+        int[] arrayOfThousands = new int[1000];
+        for (int i = 0; i < arrayOfThousands.length - 1; i++) {
+            int randVal = new Random().nextInt(1000);
+            arrayOfThousands[i] = randVal;
+        }
+
+        return arrayOfThousands;
+    }
+
     public static int findMaximumOfArray(int[] arr) {
         int max = Integer.MIN_VALUE;
         for (int value : arr) {

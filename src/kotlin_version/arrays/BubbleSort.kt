@@ -9,10 +9,10 @@ fun main() {
 
     val startTime = System.nanoTime()
 
-    for (unsortedIndex in arrayOfInts.size - 1 downTo 1) {
+    for (unsortedIndex in arrayOfIntegers.size - 1 downTo 1) {
         for (i in 0 until unsortedIndex) {
-            if (arrayOfInts[i] > arrayOfInts[i + 1]) {
-                Utils.swap(arrayOfInts, i, i + 1)
+            if (arrayOfIntegers[i] > arrayOfIntegers[i + 1]) {
+                Utils.swap(arrayOfIntegers, i, i + 1)
             }
         }
     }
@@ -21,7 +21,7 @@ fun main() {
 
     println("Execution time: ${endTime - startTime}")
 
-    arrayOfInts.forEach {
+    arrayOfIntegers.forEach {
         println(it)
     }
 }
